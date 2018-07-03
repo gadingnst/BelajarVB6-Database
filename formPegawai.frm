@@ -13,13 +13,13 @@ Begin VB.Form Form1
    StartUpPosition =   3  'Windows Default
    Begin MSDataGridLib.DataGrid DataGrid1 
       Bindings        =   "formPegawai.frx":0000
-      Height          =   1695
-      Left            =   1320
-      TabIndex        =   10
+      Height          =   1935
+      Left            =   1680
+      TabIndex        =   15
       Top             =   3840
-      Width           =   9255
-      _ExtentX        =   16325
-      _ExtentY        =   2990
+      Width           =   8415
+      _ExtentX        =   14843
+      _ExtentY        =   3413
       _Version        =   393216
       HeadLines       =   1
       RowHeight       =   15
@@ -77,12 +77,12 @@ Begin VB.Form Form1
       EndProperty
    End
    Begin MSAdodcLib.Adodc Adodc1 
-      Height          =   375
+      Height          =   615
       Left            =   2280
-      Top             =   6840
+      Top             =   6360
       Width           =   7695
       _ExtentX        =   13573
-      _ExtentY        =   661
+      _ExtentY        =   1085
       ConnectMode     =   0
       CursorLocation  =   3
       IsolationLevel  =   -1
@@ -102,8 +102,8 @@ Begin VB.Form Form1
       ForeColor       =   -2147483640
       Orientation     =   0
       Enabled         =   -1
-      Connect         =   "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Dokumen\VB6 Project\BelajarVB6-Database\DB\Pegawai.mdb;Persist Security Info=False"
-      OLEDBString     =   "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Dokumen\VB6 Project\BelajarVB6-Database\DB\Pegawai.mdb;Persist Security Info=False"
+      Connect         =   $"formPegawai.frx":0015
+      OLEDBString     =   $"formPegawai.frx":00AE
       OLEDBFile       =   ""
       DataSourceName  =   ""
       OtherAttributes =   ""
@@ -163,6 +163,7 @@ Begin VB.Form Form1
       Width           =   975
    End
    Begin VB.TextBox Text5 
+      DataSource      =   "Adodc1"
       Height          =   285
       Left            =   3960
       TabIndex        =   4
@@ -170,6 +171,7 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text4 
+      DataSource      =   "Adodc1"
       Height          =   285
       Left            =   3960
       TabIndex        =   3
@@ -177,6 +179,7 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text3 
+      DataSource      =   "Adodc1"
       Height          =   285
       Left            =   3960
       TabIndex        =   2
@@ -184,6 +187,7 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text2 
+      DataSource      =   "Adodc1"
       Height          =   285
       Left            =   3960
       TabIndex        =   1
@@ -191,6 +195,7 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text1 
+      DataSource      =   "Adodc1"
       Height          =   285
       Left            =   3960
       TabIndex        =   0
@@ -201,7 +206,7 @@ Begin VB.Form Form1
       Caption         =   "No. HP"
       Height          =   255
       Left            =   2520
-      TabIndex        =   15
+      TabIndex        =   14
       Top             =   2640
       Width           =   1335
    End
@@ -209,7 +214,7 @@ Begin VB.Form Form1
       Caption         =   "Alamat"
       Height          =   255
       Left            =   2520
-      TabIndex        =   14
+      TabIndex        =   13
       Top             =   2280
       Width           =   1335
    End
@@ -217,7 +222,7 @@ Begin VB.Form Form1
       Caption         =   "Jabatan"
       Height          =   255
       Left            =   2520
-      TabIndex        =   13
+      TabIndex        =   12
       Top             =   1920
       Width           =   1335
    End
@@ -225,7 +230,7 @@ Begin VB.Form Form1
       Caption         =   "Nama"
       Height          =   255
       Left            =   2520
-      TabIndex        =   12
+      TabIndex        =   11
       Top             =   1560
       Width           =   1335
    End
@@ -233,7 +238,7 @@ Begin VB.Form Form1
       Caption         =   "ID Pegawai"
       Height          =   255
       Left            =   2520
-      TabIndex        =   11
+      TabIndex        =   10
       Top             =   1200
       Width           =   1335
    End
@@ -251,13 +256,14 @@ Private Sub textClear()
     Text5.Text = ""
 End Sub
 
+
 Private Sub cmdAdd_Click()
     Adodc1.Recordset.AddNew
-    Adodc1.Recordset!id = Text1.Text
-    Adodc1.Recordset!nama = Text2.Text
-    Adodc1.Recordset!jabatan = Text3.Text
-    Adodc1.Recordset!alamat = Text4.Text
-    Adodc1.Recordset!nohp = Text5.Text
+    Adodc1.Recordset.Fields("id") = Text1.Text
+    Adodc1.Recordset.Fields("nama") = Text2.Text
+    Adodc1.Recordset.Fields("alamat") = Text3.Text
+    Adodc1.Recordset.Fields("jabatan") = Text4.Text
+    Adodc1.Recordset.Fields("nohp") = Text5.Text
     textClear
 End Sub
 
@@ -281,4 +287,6 @@ Private Sub cmdUpdate_Click()
     Adodc1.Recordset!jabatan = Text3.Text
     Adodc1.Recordset!alamat = Text4.Text
     Adodc1.Recordset!nohp = Text5.Text
+    textClear
 End Sub
+
