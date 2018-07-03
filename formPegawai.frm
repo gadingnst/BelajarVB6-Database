@@ -7,16 +7,34 @@ Begin VB.Form Form1
    ClientLeft      =   120
    ClientTop       =   465
    ClientWidth     =   12030
+   BeginProperty Font 
+      Name            =   "Arial Narrow"
+      Size            =   8.25
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    LinkTopic       =   "Form1"
    ScaleHeight     =   7350
    ScaleWidth      =   12030
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton cmdReport 
       Caption         =   "View Data Report"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   855
       Left            =   4920
       TabIndex        =   16
-      Top             =   6240
+      Top             =   6360
       Width           =   2535
    End
    Begin MSDataGridLib.DataGrid DataGrid1 
@@ -24,7 +42,7 @@ Begin VB.Form Form1
       Height          =   1695
       Left            =   1320
       TabIndex        =   10
-      Top             =   3840
+      Top             =   4080
       Width           =   9255
       _ExtentX        =   16325
       _ExtentY        =   2990
@@ -87,7 +105,7 @@ Begin VB.Form Form1
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
       Left            =   2280
-      Top             =   5640
+      Top             =   5880
       Width           =   7695
       _ExtentX        =   13573
       _ExtentY        =   661
@@ -132,6 +150,15 @@ Begin VB.Form Form1
    End
    Begin VB.CommandButton cmdExit 
       Caption         =   "Exit"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   1095
       Left            =   8760
       TabIndex        =   9
@@ -140,6 +167,15 @@ Begin VB.Form Form1
    End
    Begin VB.CommandButton cmdRefresh 
       Caption         =   "Refresh"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   6960
       TabIndex        =   8
@@ -148,6 +184,15 @@ Begin VB.Form Form1
    End
    Begin VB.CommandButton cmdUpdate 
       Caption         =   "Update"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   5520
       TabIndex        =   7
@@ -156,6 +201,15 @@ Begin VB.Form Form1
    End
    Begin VB.CommandButton cmdDelete 
       Caption         =   "Delete"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   4080
       TabIndex        =   6
@@ -164,6 +218,15 @@ Begin VB.Form Form1
    End
    Begin VB.CommandButton cmdAdd 
       Caption         =   "Insert"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   2760
       TabIndex        =   5
@@ -171,6 +234,15 @@ Begin VB.Form Form1
       Width           =   975
    End
    Begin VB.TextBox Text5 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
       Left            =   3960
       TabIndex        =   4
@@ -178,6 +250,15 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text4 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
       Left            =   3960
       TabIndex        =   3
@@ -185,6 +266,15 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text3 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
       Left            =   3960
       TabIndex        =   2
@@ -192,6 +282,15 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text2 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
       Left            =   3960
       TabIndex        =   1
@@ -199,11 +298,38 @@ Begin VB.Form Form1
       Width           =   3975
    End
    Begin VB.TextBox Text1 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
       Left            =   3960
       TabIndex        =   0
       Top             =   1200
       Width           =   3975
+   End
+   Begin VB.Label feedbackLabel 
+      Alignment       =   2  'Center
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H000000FF&
+      Height          =   255
+      Left            =   1440
+      TabIndex        =   18
+      Top             =   3600
+      Width           =   9015
    End
    Begin VB.Label Label6 
       Caption         =   "PROGRAM DATABASE PEGAWAI"
@@ -224,6 +350,15 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label5 
       Caption         =   "No. HP"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   2520
       TabIndex        =   15
@@ -232,6 +367,15 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label4 
       Caption         =   "Alamat"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   2520
       TabIndex        =   14
@@ -240,6 +384,15 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label3 
       Caption         =   "Jabatan"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   2520
       TabIndex        =   13
@@ -248,6 +401,15 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label2 
       Caption         =   "Nama"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   2520
       TabIndex        =   12
@@ -256,6 +418,15 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label1 
       Caption         =   "ID Pegawai"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   2520
       TabIndex        =   11
@@ -274,21 +445,41 @@ Private Sub textClear()
     Text3.Text = ""
     Text4.Text = ""
     Text5.Text = ""
+    feedbackLabel = ""
 End Sub
 
-Private Sub cmdAdd_Click()
-    Adodc1.Recordset.AddNew
+Private Sub recordData()
     Adodc1.Recordset!id = Text1.Text
     Adodc1.Recordset!nama = Text2.Text
     Adodc1.Recordset!jabatan = Text3.Text
     Adodc1.Recordset!alamat = Text4.Text
     Adodc1.Recordset!nohp = Text5.Text
-    textClear
+End Sub
+
+Private Sub cmdAdd_Click()
+    If Text1.Text <> "" And Text2.Text <> "" And Text3.Text <> "" And Text4.Text <> "" And Text5.Text <> "" Then
+        Adodc1.Recordset.AddNew
+        recordData
+        textClear
+        feedbackLabel = "Insert Data Berhasil"
+    Else
+        feedbackLabel = "Insert Data Gagal, Form Tidak Boleh Kosong"
+    End If
+End Sub
+
+Private Sub cmdUpdate_Click()
+    If Text1.Text <> "" And Text2.Text <> "" And Text3.Text <> "" And Text4.Text <> "" And Text5.Text <> "" Then
+        Adodc1.Recordset.Update
+        recordData
+        feedbackLabel = "Update Data Berhasil"
+    Else
+        feedbackLabel = "Update Data Gagal"
+    End If
 End Sub
 
 Private Sub cmdDelete_Click()
     Adodc1.Recordset.Delete
-    Adodc1.Recordset.MoveNext
+    textClear
 End Sub
 
 Private Sub cmdExit_Click()
@@ -305,13 +496,4 @@ Private Sub cmdReport_Click()
         .WindowState = 2
         .Show
     End With
-End Sub
-
-Private Sub cmdUpdate_Click()
-    Adodc1.Recordset.Update
-    Adodc1.Recordset!id = Text1.Text
-    Adodc1.Recordset!nama = Text2.Text
-    Adodc1.Recordset!jabatan = Text3.Text
-    Adodc1.Recordset!alamat = Text4.Text
-    Adodc1.Recordset!nohp = Text5.Text
 End Sub
