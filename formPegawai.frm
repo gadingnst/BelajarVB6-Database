@@ -11,6 +11,14 @@ Begin VB.Form Form1
    ScaleHeight     =   7350
    ScaleWidth      =   12030
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton cmdReport 
+      Caption         =   "View Data Report"
+      Height          =   855
+      Left            =   4920
+      TabIndex        =   16
+      Top             =   6240
+      Width           =   2535
+   End
    Begin MSDataGridLib.DataGrid DataGrid1 
       Bindings        =   "formPegawai.frx":0000
       Height          =   1695
@@ -79,7 +87,7 @@ Begin VB.Form Form1
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
       Left            =   2280
-      Top             =   6840
+      Top             =   5640
       Width           =   7695
       _ExtentX        =   13573
       _ExtentY        =   661
@@ -124,11 +132,11 @@ Begin VB.Form Form1
    End
    Begin VB.CommandButton cmdExit 
       Caption         =   "Exit"
-      Height          =   255
-      Left            =   9360
+      Height          =   1095
+      Left            =   8760
       TabIndex        =   9
-      Top             =   3120
-      Width           =   1095
+      Top             =   1560
+      Width           =   2295
    End
    Begin VB.CommandButton cmdRefresh 
       Caption         =   "Refresh"
@@ -196,6 +204,23 @@ Begin VB.Form Form1
       TabIndex        =   0
       Top             =   1200
       Width           =   3975
+   End
+   Begin VB.Label Label6 
+      Caption         =   "PROGRAM DATABASE PEGAWAI"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   3240
+      TabIndex        =   17
+      Top             =   360
+      Width           =   6015
    End
    Begin VB.Label Label5 
       Caption         =   "No. HP"
@@ -271,7 +296,15 @@ Private Sub cmdExit_Click()
 End Sub
 
 Private Sub cmdRefresh_Click()
-    DataGrid1.Refresh
+    textClear
+    Form1.Refresh
+End Sub
+
+Private Sub cmdReport_Click()
+    With DataReport1
+        .WindowState = 2
+        .Show
+    End With
 End Sub
 
 Private Sub cmdUpdate_Click()
